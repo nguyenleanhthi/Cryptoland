@@ -1,0 +1,121 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  background-color: rgba($color: $color-white, $alpha: 1);
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.4s;
+  z-index: 10;
+  &__logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -3.5px;
+    &__img {
+      width: 45px;
+      height: 51px;
+      margin-right: 13px;
+      background: url(/assets/images/Logo_gradient.svg) no-repeat center / contain;
+    }
+    &__title {
+      font-size: 30px;
+      font-family: Gilroy-Light;
+      color: $text-color-primary;
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navigation__item:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 228px;
+
+    &__language {
+      display: block;
+      background-color: transparent;
+      min-width: 35px;
+      height: 30px;
+      margin-right: 30px;
+    }
+
+    &__select-hidden {
+      visibility: hidden;
+    }
+
+    &__select-style {
+      .language-select__item {
+      }
+    }
+
+    &__btn-group {
+      display: flex;
+      a {
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+      .header-right {
+        &__btn-signin {
+          min-width: 92px;
+          height: 40px;
+          margin-right: 22px;
+        }
+
+        &__btn-signup {
+        }
+      }
+    }
+  }
+
+  // header background transparent
+  &--transparent {
+    border: none;
+    background-color: rgba($color: $color-white, $alpha: 0);
+    .header {
+      &__logo {
+        &__img {
+          background: url(/assets/images/Logo_white.svg) no-repeat center / contain;
+        }
+        &__title {
+          color: $color-white;
+        }
+      }
+
+      &__navigation {
+        .navigation__link {
+          color: $color-white;
+          &::after {
+            background-color: $color-white;
+          }
+        }
+      }
+
+      &-right__btn-group {
+        .header-right {
+          &__btn-signup {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
