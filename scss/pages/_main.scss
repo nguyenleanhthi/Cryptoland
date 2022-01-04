@@ -102,7 +102,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url(/assets/images/mainBg.png) no-repeat bottom center;
+      background: url(../../assets/images/mainBg.png) no-repeat bottom center;
       z-index: 1;
     }
   }
@@ -153,7 +153,7 @@
             content: "";
             width: 28px;
             height: 33px;
-            background: url(/assets/images/video-btn-icon.svg);
+            background: url(../../assets/images/video-btn-icon.svg);
             position: absolute;
             top: 50%;
             left: 50%;
@@ -338,7 +338,7 @@
   // section process
   &.process {
     position: relative;
-    background-image: url(/assets/images/team-bg.jpg);
+    background-image: url(../../assets/images/team-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 150px 0;
@@ -510,7 +510,7 @@
         max-width: 770px;
         width: 100%;
         height: 42px;
-        background-image: url(/assets/images/ico-bar-bg.jpg);
+        background-image: url(../../assets/images/ico-bar-bg.jpg);
         margin-bottom: 65px;
         position: relative;
         &::before {
@@ -621,7 +621,7 @@
   // section platform
   &.platform {
     padding: 150px 0;
-    background: url(/assets/images/token.png) no-repeat right center, #fcfcfc;
+    background: url(../../assets/images/token.png) no-repeat right center, #fcfcfc;
     background-attachment: fixed;
     position: relative;
     .container {
@@ -654,7 +654,7 @@
   // section token
   &.token {
     padding: 150px 0;
-    background: url(/assets/images/tokenBg-cut.png) no-repeat left center;
+    background: url(../../assets/images/tokenBg-cut.png) no-repeat left center;
     .token {
       &__title {
         margin-bottom: 58px;
@@ -739,7 +739,7 @@
           content: "";
           width: 51px;
           height: 55px;
-          background: url(/assets/images/pdf.svg) no-repeat center / cover;
+          background: url(../../assets/images/pdf.svg) no-repeat center / cover;
           position: absolute;
           top: 50%;
           right: -24px;
@@ -822,7 +822,7 @@
 
   // section brain
   &.brain {
-    background: url(/assets/images/team-bg.jpg) no-repeat top / cover;
+    background: url(../../assets/images/team-bg.jpg) no-repeat top / cover;
     padding: 150px 0 104px;
     .main-section__title {
       margin-bottom: 52px;
@@ -994,7 +994,7 @@
   // section subcribe
   &.subscribe {
     padding: 150px 0;
-    background: url(/assets/images/partnersBg.jpg) no-repeat center / cover;
+    background: url(../../assets/images/partnersBg.jpg) no-repeat center / cover;
 
     .main-section__title {
       margin-bottom: 68px;
@@ -1132,7 +1132,7 @@
         width: 12px;
         height: 10px;
         border-radius: 50%;
-        background: url(/assets/images/check.svg);
+        background: url(../../assets/images/check.svg);
         position: absolute;
         left: -1px;
         top: 11px;
