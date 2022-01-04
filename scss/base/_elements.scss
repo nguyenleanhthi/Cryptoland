@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/assets/fonts/Gilroy-Light.woff");
+}
+
+* {
+  font-family: Catamaran, sans-serif;
+  color: $text-color-primary;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  z-index: 3;
+  box-sizing: border-box;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  color: $text-color-selection;
+  background: $color-selection;
+}
+
+.title {
+  font-family: Raleway;
+  font-weight: 700;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.mg-0 {
+  margin: 0 !important;
+}
+
+.txt {
+  &--light-blue {
+    color: $color-light-blue !important;
+  }
+  &--light-red {
+    color: $color-light-red !important;
+  }
+  &--light-pink {
+    color: $color-light-pink !important;
+  }
+  &--light-green {
+    color: $color-light-green !important;
+  }
+  &--light-purple {
+    color: $color-light-purple !important;
+  }
+  &--light-orange {
+    color: $color-light-orange !important;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+.bg {
+  &--light-blue {
+    background-color: $color-light-blue !important;
+  }
+  &--light-red {
+    background-color: $color-light-red !important;
+  }
+  &--light-green {
+    background-color: $color-light-green !important;
+  }
+  &--light-purple {
+    background-color: $color-light-purple !important;
+  }
+  &--light-orange {
+    background-color: $color-light-orange !important;
+  }
+}
+
+.border {
+  &--light-blue {
+    border-color: $color-light-blue !important;
+  }
+  &--light-red {
+    border-color: $color-light-red !important;
+  }
+  &--light-green {
+    border-color: $color-light-green !important;
+  }
+  &--light-purple {
+    border-color: $color-light-purple !important;
+  }
+  &--light-orange {
+    border-color: $color-light-orange !important;
+  }
+}

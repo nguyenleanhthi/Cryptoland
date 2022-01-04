@@ -1,0 +1,58 @@
+.btn {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &.btn {
+    &--purple {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+    &--white {
+      background-color: $color-white;
+      color: #a16da5;
+    }
+    &--light-green {
+      background-color: $color-light-green;
+      color: $color-white;
+    }
+    &--light-blue {
+      background-color: $color-light-blue;
+      color: $color-white;
+    }
+    &--light-red {
+      background-color: $color-light-red;
+      color: $color-white;
+    }
+    &--light-orange {
+      background-color: $color-light-orange;
+      color: $color-white;
+    }
+    &--transperent {
+      background-color: transparent;
+      color: $text-color-primary;
+    }
+
+    &--bold {
+      font-weight: 600;
+    }
+
+    &--light-black-hover {
+      &:hover {
+        background-color: $color-light-black;
+        color: $color-white;
+      }
+    }
+    &--purple-hover {
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}

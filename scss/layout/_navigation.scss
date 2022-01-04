@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  &__link {
+    font-size: 1rem;
+    color: $text-color-primary;
+    position: relative;
+    &::after {
+      content: "";
+      opacity: 0;
+      background-color: $color-primary;
+      height: 2px;
+      transition: 0.4s;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
