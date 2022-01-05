@@ -50,7 +50,7 @@
 }
 
 .animation {
-  // opacity: 1;
+  opacity: 0;
   &.bottom-to-top {
     animation-name: bottomToTop;
   }

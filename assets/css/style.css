@@ -290,6 +290,10 @@ body {
   }
 }
 
+.animation {
+  opacity: 0;
+}
+
 .animation.bottom-to-top {
   -webkit-animation-name: bottomToTop;
           animation-name: bottomToTop;
