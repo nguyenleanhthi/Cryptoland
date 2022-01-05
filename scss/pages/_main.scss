@@ -14,10 +14,8 @@
 
 // main content
 .main-section {
-  background-color: $color-white;
   padding-bottom: 150px;
   position: relative;
-  color: #000;
   // section promo
   &.promo {
     height: 814px;
@@ -654,7 +652,7 @@
   // section token
   &.token {
     padding: 150px 0;
-    background: url(../../assets/images/tokenBg-cut.png) no-repeat left center;
+    background: url(../../assets/images/tokenBg-cut.png) no-repeat left top;
     .token {
       &__title {
         margin-bottom: 58px;

@@ -1,0 +1,73 @@
+@keyframes bottomToTop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes overturn {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+
+.animation {
+  opacity: 0;
+  &.bottom-to-top {
+    animation-name: bottomToTop;
+  }
+  &.right-to-left {
+    animation-name: rightToLeft;
+  }
+  &.left-to-right {
+    animation-name: leftToRight;
+  }
+  &.spin-around {
+    animation-name: spinAround;
+  }
+  &.over-turn {
+    animation-name: overturn;
+  }
+}
+
+.opacity-1 {
+  opacity: 1;
+}
