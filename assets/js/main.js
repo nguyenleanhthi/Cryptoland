@@ -31,7 +31,7 @@ function setIcoBar() {
   const icoBarValueMax = icoBar.getAttribute('value-max');
   var icoBarStyle = icoBar.style;
   icoBarStyle.setProperty('--valuePercent', `${(1 - icoBarValue / icoBarValueMax) * 100}%`);
-  icoBarStyle.setProperty('--valueMaxString', `${12000 / 1000}M USD MAX`);
+  icoBarStyle.setProperty('--valueMaxString', `"${12000 / 1000}M USD MAX"`);
 
   const icoBarMarkets = doc.getElementsByClassName('ico__bar-market');
   for (var i = 0; i < icoBarMarkets.length; i++) {
