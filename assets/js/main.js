@@ -464,8 +464,6 @@ function setAnimation() {
     const animationDuration = +elem.getAttribute('animation-duration'); // second
     elem.style.setProperty('animation-duration', `${animationDuration}s`);
     elem.classList.add(animationClass);
-    setTimeout(() => {
-      elem.classList.add('opacity-1');
-    }, animationDuration * 1000);
+    elem.classList.add('opacity-1');
   }
 }
