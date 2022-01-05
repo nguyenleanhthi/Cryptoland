@@ -176,7 +176,7 @@ function setAnimation() {
     const animationPromos = doc.querySelectorAll('#section-promo .animation');
     for (let i = 0; i < animationPromos.length; i++) {
       const animationPromo = animationPromos[i];
-      const isScrolled = isScrolledIntoView(animationPromo);
+      const isScrolled = isScrolledIntoView(animationPromo, 4);
       if (!isScrolled) continue;
 
       if (i === 0) {
