@@ -2261,7 +2261,7 @@ body,
   .platform__description {
     width: 480px;
   }
-  .platform__description .main-section__title {
+  .platform__description .main-section__subtitle {
     margin-bottom: 15px;
   }
   .platform__logo {
@@ -3150,7 +3150,7 @@ body,
   .subscribe {
     padding: 60px 0;
   }
-  .subscribe .main-section__subtitle {
+  .subscribe .main-section__title {
     margin-bottom: 35px;
   }
 }
