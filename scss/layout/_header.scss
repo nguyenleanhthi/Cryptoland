@@ -12,6 +12,7 @@
   left: 0;
   transition: 0.4s;
   z-index: 10;
+  overflow-y: scroll;
   &__logo {
     display: flex;
     align-items: center;

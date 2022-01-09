@@ -503,7 +503,7 @@ function setAnimation() {
     const elemRect = elem.getBoundingClientRect();
     const elemRectTop = elemRect.top;
     const elemRectHeight = elemRect.height;
-
+    console.log(elemRectTop, elemRectHeight, docClientHeight)
     return elemRectTop + elemRectHeight / part - docClientHeight <= 0;
   }
 

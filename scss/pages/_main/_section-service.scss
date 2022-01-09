@@ -1,10 +1,12 @@
 // section service
 .service {
   padding: 150px 0 0;
+  .container {
+    padding: 0;
+  }
   .main-section__title {
     margin-bottom: 74px;
   }
-
   &__box {
     display: flex;
     flex-wrap: wrap;
