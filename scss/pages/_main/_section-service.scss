@@ -1,7 +1,7 @@
 // section service
 .service {
   padding: 150px 0 0;
-  &__title {
+  .main-section__title {
     margin-bottom: 74px;
   }
 
@@ -55,6 +55,9 @@
   }
   @include responsive(lt-tablet-m) {
     padding: 100px 0 0;
+    .main-section__title {
+      margin-bottom: 60px;
+    }
   }
   @include responsive(lt-tablet-s) {
     &__item {
@@ -64,6 +67,9 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0 0;
+    .main-section__title {
+      margin-bottom: 25px;
+    }
   }
 }
 // end section service

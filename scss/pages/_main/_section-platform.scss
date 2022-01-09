@@ -10,10 +10,9 @@
   &__description {
     max-width: 100%;
     width: 475px;
-  }
-
-  &__title {
-    margin-bottom: 38px;
+    .main-section__title {
+      margin-bottom: 38px;
+    }
   }
 
   &__content {
@@ -40,6 +39,9 @@
     padding: 100px 0;
     &__description {
       width: 480px;
+      .main-section__title {
+        margin-bottom: 15px;
+      }
     }
     background-position: 600px -510px;
     &__logo {
@@ -51,6 +53,9 @@
   @include responsive(lt-tablet-s) {
     &__description {
       width: 540px;
+      .main-section__title {
+        margin-bottom: 30px;
+      }
     }
 
     background-image: none;

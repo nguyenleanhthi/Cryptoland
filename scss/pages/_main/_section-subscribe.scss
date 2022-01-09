@@ -68,6 +68,9 @@
 
   @include responsive(lt-tablet-m) {
     padding: 100px 0;
+    .main-section__subtitle {
+      margin-bottom: 15px;
+    }
   }
   @include responsive(lt-tablet-s) {
     &__form-join {
@@ -84,6 +87,9 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0;
+    .main-section__subtitle {
+      margin-bottom: 35px;
+    }
   }
 }
 // end section subcribe

@@ -22,6 +22,14 @@
 
   @include responsive(lt-tablet-m) {
     padding: 100px 0;
+    .main-section__subtitle {
+      margin-bottom: 15px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   @include responsive(lt-mobile) {
     padding: 60px 0;

@@ -7,8 +7,8 @@
   padding: 150px 0;
   min-height: 630px;
 
-  &__title {
-    margin-bottom: 97px;
+  .main-section__title {
+    margin-bottom: 100px;
   }
 
   &__content {
@@ -78,6 +78,9 @@
   }
   @include responsive(lt-tablet-m) {
     padding: 100px 0;
+    .main-section__title {
+      margin-bottom: 60px;
+    }
     &__step {
       &__arrow-line {
         width: 95px;
@@ -127,6 +130,9 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0;
+    .main-section__title {
+      margin-bottom: 35px;
+    }
   }
 }
 // end section process

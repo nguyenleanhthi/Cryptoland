@@ -100,12 +100,17 @@
   }
 
   @include responsive(lt-mobile) {
-    padding: 60px 0 0;
+    padding: 60px 0 0; 
+    .main-section__title {
+      margin-bottom: 25px;
+    }
+    
     &__logo {
       & > img {
         width: 100%;
       }
     }
+    
   }
 }
 // end section about

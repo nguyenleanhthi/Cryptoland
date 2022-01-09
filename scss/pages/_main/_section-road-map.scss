@@ -1,8 +1,9 @@
 // section road map
 .road-map {
   padding: 150px 0;
-  &__title {
-    margin-bottom: 100px;
+
+  .main-section__title {
+    margin-bottom: calc(100px - 31.5px);
   }
 
   &__content {
@@ -98,8 +99,11 @@
     }
   }
 
-  @include responsive(lt-tablet-m) {
+  @include responsive(lt-tablet) {
     padding: 100px 0;
+    .main-section__title {
+      margin-bottom: 70px;
+    }
     &__content {
       flex-direction: column;
     }

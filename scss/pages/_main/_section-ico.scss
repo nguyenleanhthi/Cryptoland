@@ -32,7 +32,7 @@
     box-sizing: content-box;
   }
 
-  &__title {
+  .main-section__title {
     font-size: 40px;
     color: $text-color-title;
     margin: 0px 0 100px;
@@ -124,6 +124,9 @@
   }
 
   @include responsive(lt-mobile) {
+    .main-section__title {
+      margin-bottom: 80px;
+    }
     &__footer {
       flex-direction: column;
     }

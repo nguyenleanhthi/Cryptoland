@@ -75,6 +75,9 @@
       flex-direction: column;
       align-items: center;
     }
+    .main-section__subtitle {
+      margin-bottom: 15px;
+    }
     &__info {
       width: 33.333333333%;
     }
@@ -86,6 +89,9 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0 calc(60px - 46px);
+    .main-section__title {
+      margin-bottom: 35px;
+    }
   }
 }
 // end section brain

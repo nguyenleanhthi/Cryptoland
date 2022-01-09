@@ -2,7 +2,7 @@
 .press {
   padding: 150px 0;
   .main-section__title {
-    margin-bottom: 57px;
+    margin-bottom: 60px;
   }
   &__carousel {
     display: flex;
@@ -38,6 +38,9 @@
   }
   @include responsive(lt-tablet-m) {
     padding: 100px 0;
+    .main-section__subtitle {
+      margin-bottom: 15px;
+    }
     &__carousel {
       .carousel__outer {
         height: 327px;
@@ -59,6 +62,9 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0;
+    .main-section__title {
+      margin-bottom: 35px;
+    }
     &__carousel {
       .carousel__outer {
         min-height: 297px;

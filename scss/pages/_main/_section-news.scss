@@ -58,6 +58,9 @@
   }
   @include responsive(lt-tablet-m) {
     padding: 100px 0;
+    .main-section__subtitle {
+      margin-bottom: 15px;
+    }
     &__carousel {
       .carousel__outer {
         height: 542px;
@@ -89,6 +92,9 @@
     }
   }
   @include responsive(lt-mobile-m) {
+    .main-section__title {
+      margin-bottom: 35px;
+    }
     &__carousel {
       .carousel__outer {
         height: calc(422px + 100vh - 150vw);

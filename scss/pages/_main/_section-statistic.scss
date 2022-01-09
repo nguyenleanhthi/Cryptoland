@@ -74,11 +74,15 @@
   }
   @include responsive(lt-tablet-m) {
     padding: 100px 0;
+
     &__content {
       flex-direction: column;
       margin-bottom: 70px;
     }
     &__description {
+      .main-section__subtitle {
+        margin-bottom: 15px;
+      }
       .main-section__content {
         max-width: 100%;
         width: 445px;
@@ -108,6 +112,11 @@
 
   @include responsive(lt-mobile) {
     padding: 60px 0;
+    &__description {
+      .main-section__title {
+        margin-bottom: 25px;
+      }
+    }
   }
 }
 
