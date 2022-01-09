@@ -92,7 +92,7 @@
   @include responsive(lt-mobile-m) {
     &__carousel {
       .carousel__outer{
-        height: calc(422px + 20vw);
+        height: calc(422px + 100vh - 150vw);
       }
     }
   }
