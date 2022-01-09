@@ -88,7 +88,7 @@ function setCarousel() {
     const stage = carousel.querySelector('.carousel__stage');
     const outer = carousel.querySelector('.carousel__outer');
     const pagination = carousel.querySelector('.carousel__pagination');
-    const carouselOuterWidth = outer.clientWidth;
+    const carouselOuterWidth = outer.offsetWidth;
     const carouselStageWidth = stage.clientWidth;
     const itemWidth = carouselStageWidth / carousel.querySelectorAll('.carousel__item').length;
     let isPressedDown = false;
@@ -98,13 +98,11 @@ function setCarousel() {
     let stageClientXCurrent = 0;
     const stageLeftMin = -(carouselStageWidth - carouselOuterWidth);
     const pageTotal = Math.ceil(carouselStageWidth / carouselOuterWidth) - (carouselStageWidth % carouselOuterWidth < 100 && carouselStageWidth % carouselOuterWidth > 0 ? 1 : 0);
-    console.log(carouselStageWidth / carouselOuterWidth, carouselStageWidth, carouselOuterWidth);
     let page = 1;
     setCarouselPagination();
 
     const eventNameClickdown = deviceName === 'desktop' ? 'mousedown' : 'pointerdown';
     outer.addEventListener(eventNameClickdown, (e) => {
-      console.log('down');
       isPressedDown = true;
       stage.style.transition = 'none';
       stageClientXMouseDown = positiveNumber(e.clientX);
@@ -113,7 +111,6 @@ function setCarousel() {
 
     const eventNameClickup = deviceName === 'desktop' ? 'mouseup' : 'touchend';
     outer.addEventListener(eventNameClickup, (e) => {
-      console.log('up');
       isPressedDown = false;
       stage.style.transition = '0.4s';
       stageLeftCurrent = stageLeftCurrent + cursorXSpace;
@@ -122,7 +119,6 @@ function setCarousel() {
 
     const eventNameClickmove = deviceName === 'desktop' ? 'mousemove' : 'touchmove';
     outer.addEventListener(eventNameClickmove, (e) => {
-      console.log('move');
       if (!isPressedDown) return;
       stageClientXCurrent = positiveNumber(e.clientX || e.touches[0].clientX);
       cursorXSpace = stageClientXCurrent - stageClientXMouseDown;
@@ -145,7 +141,7 @@ function setCarousel() {
       stage.style.left = `${stageLeftCurrent}px`;
 
       // Set page for carousel
-      page = Math.ceil((Math.abs(stageLeftCurrent) + 0.01) / carouselOuterWidth);
+      page = Math.ceil((Math.abs(stageLeftCurrent) + 20) / carouselOuterWidth);
       carousel.querySelector('.carousel__pagination__item--selected').classList.remove('carousel__pagination__item--selected');
       doc.getElementById(`carousel-${carouselIndex}-pagination-item-${page}`).classList.add('carousel__pagination__item--selected');
     }

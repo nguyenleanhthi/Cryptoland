@@ -2772,7 +2772,8 @@ body,
   padding: 40px 49px 36px 38px;
   margin: 20px 30px 70px 0;
   background-color: #fff;
-  height: 392px;
+  min-height: 100%;
+  height: auto;
 }
 
 .news__item:hover {
@@ -2844,6 +2845,12 @@ body,
   }
   .news__carousel .carousel__navigation {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 25em) {
+  .news__carousel .carousel__outer {
+    height: calc(422px + 20vw);
   }
 }
 

@@ -16,7 +16,8 @@
     padding: 40px 49px 36px 38px;
     margin: 20px 30px 70px 0;
     background-color: $color-white;
-    height: 392px;
+    min-height: 100%;
+    height: auto;
     &:hover {
       box-shadow: 0 3px 27px rgba(0, 0, 0, 0.17);
     }
@@ -80,8 +81,18 @@
       .carousel__stage {
         width: calc(100% * 4);
       }
+      .carousel__outer{
+        // height: calc(422px + 10vw);
+      }
       .carousel__navigation {
         margin-top: 30px;
+      }
+    }
+  }
+  @include responsive(lt-mobile-m) {
+    &__carousel {
+      .carousel__outer{
+        height: calc(422px + 20vw);
       }
     }
   }
