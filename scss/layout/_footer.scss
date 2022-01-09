@@ -18,7 +18,7 @@
     display: flex;
     max-width: 41.666667%;
     width: 100%;
-    margin-right: 95px;
+    margin-right: 8.333333%;
   }
 
   &__logo {
@@ -68,7 +68,6 @@
 
   @include responsive(lt-tablet) {
     &__contact-box {
-      margin-right: 80px;
       margin-bottom: 40px;
     }
   }

@@ -581,7 +581,7 @@ body,
   display: flex;
   max-width: 41.666667%;
   width: 100%;
-  margin-right: 95px;
+  margin-right: 8.333333%;
 }
 
 .footer__logo {
@@ -637,7 +637,6 @@ body,
 
 @media (max-width: 74.9375em) {
   .footer__contact-box {
-    margin-right: 80px;
     margin-bottom: 40px;
   }
 }
