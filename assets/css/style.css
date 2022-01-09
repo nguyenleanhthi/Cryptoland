@@ -38,6 +38,10 @@ input {
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 .app {
   overflow-x: hidden;
@@ -1208,7 +1212,7 @@ body,
 }
 
 .partner {
-  padding-top: 90px;
+  padding: 90px 0 0;
 }
 
 .partner__box {
@@ -1246,18 +1250,18 @@ body,
 
 @media (max-width: 61.9375em) {
   .partner {
-    padding: 60px 0 100px;
+    padding-top: 60px;
   }
 }
 
 @media (max-width: 35.9375em) {
   .partner {
-    padding: 60px 0 60px;
+    padding-top: 60px;
   }
 }
 
 .about {
-  padding-bottom: 150px;
+  padding: 150px 0 0;
 }
 
 .about__description {
@@ -1349,7 +1353,7 @@ body,
 
 @media (max-width: 61.9375em) {
   .about {
-    padding-bottom: 100px;
+    padding: 100px 0 0;
   }
   .about .main-section__about-1,
   .about .main-section__about-2 {
@@ -1380,11 +1384,15 @@ body,
 
 @media (max-width: 35.9375em) {
   .about {
-    padding-bottom: 60px;
+    padding: 60px 0 0;
   }
   .about__logo > img {
     width: 100%;
   }
+}
+
+.service {
+  padding: 150px 0 0;
 }
 
 .service__title {
@@ -1459,7 +1467,7 @@ body,
 
 @media (max-width: 61.9375em) {
   .service {
-    padding-bottom: 100px;
+    padding: 100px 0 0;
   }
 }
 
@@ -1472,8 +1480,12 @@ body,
 
 @media (max-width: 35.9375em) {
   .service {
-    padding-bottom: 60px;
+    padding: 60px 0 0;
   }
+}
+
+.road-map {
+  padding: 150px 0;
 }
 
 .road-map__title {
@@ -1586,7 +1598,7 @@ body,
 
 @media (max-width: 61.9375em) {
   .road-map {
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
   .road-map__content {
     -webkit-box-orient: vertical;
@@ -1652,7 +1664,7 @@ body,
 
 @media (max-width: 35.9375em) {
   .road-map {
-    padding-bottom: 60px;
+    padding: 60px 0;
   }
 }
 
@@ -1931,6 +1943,10 @@ body,
   }
 }
 
+.ico {
+  padding: 0;
+}
+
 .ico .container::before {
   content: "";
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #8761a8), to(#f4929b));
@@ -2078,18 +2094,12 @@ body,
 }
 
 @media (max-width: 61.9375em) {
-  .ico {
-    padding-bottom: 100px;
-  }
   .ico .container {
     max-width: 100%;
   }
 }
 
 @media (max-width: 35.9375em) {
-  .ico {
-    padding-bottom: 60px;
-  }
   .ico__footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2105,7 +2115,7 @@ body,
 }
 
 .fag {
-  padding-bottom: calc(150px - 44px);
+  padding: 150px 0 calc(150px - 44px);
 }
 
 .fag .container {
@@ -2150,7 +2160,7 @@ body,
 
 @media (max-width: 61.9375em) {
   .fag {
-    padding-bottom: calc(100px - 30px);
+    padding: 100px 0 calc(100px - 30px);
   }
   .fag__item {
     width: 100%;
@@ -2160,7 +2170,7 @@ body,
 
 @media (max-width: 35.9375em) {
   .fag {
-    padding-bottom: calc(60px - 30px);
+    padding: 60px 0 calc(60px - 30px);
   }
   .fag__item {
     width: 100%;
@@ -2253,7 +2263,7 @@ body,
 }
 
 .token {
-  padding: 150px 0;
+  padding: 150px 0 0;
   background: url(../../assets/images/tokenBg-cut.png) no-repeat left top;
 }
 
@@ -2328,7 +2338,7 @@ body,
 
 @media (max-width: 61.9375em) {
   .token {
-    padding: 100px 0;
+    padding: 100px 0 0;
     background-image: none;
   }
   .token .container {
@@ -2341,11 +2351,15 @@ body,
 
 @media (max-width: 35.9375em) {
   .token {
-    padding: 60px 0;
+    padding: 60px 0 0;
   }
   .token__btn-buy {
     width: 100%;
   }
+}
+
+.document {
+  padding: 150px 0;
 }
 
 .document .main-section__title {
@@ -2409,7 +2423,7 @@ body,
 
 @media (max-width: 61.9375em) {
   .document {
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
   .document__item {
     width: calc(50% - 30px);
@@ -2426,7 +2440,7 @@ body,
 
 @media (max-width: 35.9375em) {
   .document {
-    padding-bottom: 60px;
+    padding: 60px 0;
   }
 }
 
@@ -2721,6 +2735,18 @@ body,
   .press {
     padding: 60px 0;
   }
+  .press__carousel .carousel__outer {
+    min-height: 297px;
+  }
+  .press__carousel .carousel__stage {
+    width: calc(100% * 4);
+  }
+  .press__carousel .carousel__item {
+    padding: 0 30px;
+  }
+  .press__carousel .carousel__pagination {
+    margin-top: 30px;
+  }
 }
 
 .news {
@@ -2812,6 +2838,9 @@ body,
 @media (max-width: 35.9375em) {
   .news {
     padding: 60px 0;
+  }
+  .news__carousel .carousel__stage {
+    width: calc(100% * 4);
   }
 }
 

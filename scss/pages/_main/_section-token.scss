@@ -1,6 +1,6 @@
 // section token
 .token {
-  padding: 150px 0;
+  padding: 150px 0 0;
   background: url(../../assets/images/tokenBg-cut.png) no-repeat left top;
 
   .container {
@@ -63,14 +63,14 @@
     }
   }
   @include responsive(lt-tablet-m) {
-    padding: 100px 0;
+    padding: 100px 0 0;
     background-image: none;
     .container {
       flex-direction: row;
     }
   }
   @include responsive(lt-mobile) {
-    padding: 60px 0;
+    padding: 60px 0 0;
     &__btn-buy {
       width: 100%;
     }

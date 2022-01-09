@@ -1,6 +1,6 @@
 // section partnert
 .partner {
-  padding-top: 90px;
+  padding: 90px 0 0;
   &__box {
     display: flex;
     align-items: center;
@@ -17,11 +17,11 @@
   }
 
   @include responsive(lt-tablet-m) {
-    padding: 60px 0 100px;
+    padding-top: 60px;
   }
 
   @include responsive(lt-mobile) {
-    padding: 60px 0 60px;
+    padding-top: 60px;
   }
 }
 // end section partner

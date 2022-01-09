@@ -17,6 +17,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 .app {
   overflow-x: hidden;

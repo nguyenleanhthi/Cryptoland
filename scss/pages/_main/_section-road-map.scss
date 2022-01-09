@@ -1,5 +1,6 @@
 // section road map
 .road-map {
+  padding: 150px 0;
   &__title {
     margin-bottom: 100px;
   }
@@ -98,7 +99,7 @@
   }
 
   @include responsive(lt-tablet-m) {
-    padding-bottom: 100px;
+    padding: 100px 0;
     &__content {
       flex-direction: column;
     }
@@ -154,7 +155,7 @@
     }
   }
   @include responsive(lt-mobile) {
-    padding-bottom: 60px;
+    padding: 60px 0;
   }
 }
 // end section road map

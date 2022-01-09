@@ -3,7 +3,8 @@
 const win = window,
   doc = document,
   docElem = doc.documentElement;
-
+const deviceName = getDeviceType();
+console.log(deviceName);
 win.ondragstart = function () {
   return false;
 };
@@ -37,12 +38,11 @@ function setHeaderMenu() {
   const header = doc.getElementById('header');
   const headerMenu = doc.getElementById('header-menu');
   let isOpen = headerMenu.getAttribute('is-open') === 'true';
-
+  const navigationLinks = header.querySelectorAll('.navigation .navigation__link');
   headerMenu.onclick = (e) => {
     if (isOpen) {
       header.style.height = null;
       headerMenu.innerHTML = '<i class="fas fa-bars fa-lg">';
-      console.log();
       if (docElem.scrollTop === 0) {
         header.classList.add('header--transparent');
       }
@@ -53,6 +53,17 @@ function setHeaderMenu() {
     }
     isOpen = !isOpen;
   };
+
+  navigationLinks.forEach((navigationLink) => {
+    navigationLink.onclick = (e) => {
+      header.style.height = null;
+      headerMenu.innerHTML = '<i class="fas fa-bars fa-lg">';
+      if (docElem.scrollTop === 0) {
+        header.classList.add('header--transparent');
+      }
+      isOpen = false;
+    };
+  });
 }
 
 function setIcoBar() {
@@ -76,40 +87,44 @@ function setCarousel() {
   carousels.forEach((carousel, carouselIndex) => {
     const stage = carousel.querySelector('.carousel__stage');
     const outer = carousel.querySelector('.carousel__outer');
-    const carouselOuterWidth = outer.clientWidth;
     const pagination = carousel.querySelector('.carousel__pagination');
+    const carouselOuterWidth = outer.clientWidth;
     const carouselStageWidth = stage.clientWidth;
     const itemWidth = carouselStageWidth / carousel.querySelectorAll('.carousel__item').length;
-    
-
     let isPressedDown = false;
     let stageClientXMouseDown = 0;
     let cursorXSpace = 0;
     let stageLeftCurrent = 0;
     let stageClientXCurrent = 0;
     const stageLeftMin = -(carouselStageWidth - carouselOuterWidth);
-    const pageTotal = Math.ceil(carouselStageWidth / carouselOuterWidth);
+    const pageTotal = Math.ceil(carouselStageWidth / carouselOuterWidth) - (carouselStageWidth % carouselOuterWidth < 100 && carouselStageWidth % carouselOuterWidth > 0 ? 1 : 0);
+    console.log(carouselStageWidth / carouselOuterWidth, carouselStageWidth, carouselOuterWidth);
     let page = 1;
-
     setCarouselPagination();
 
-    outer.addEventListener('mousedown', (e) => {
+    const eventNameClickdown = deviceName === 'desktop' ? 'mousedown' : 'pointerdown';
+    outer.addEventListener(eventNameClickdown, (e) => {
+      console.log('down');
       isPressedDown = true;
       stage.style.transition = 'none';
       stageClientXMouseDown = positiveNumber(e.clientX);
       stage.style.transition = '0px';
     });
 
-    outer.addEventListener('mouseup', (e) => {
+    const eventNameClickup = deviceName === 'desktop' ? 'mouseup' : 'touchend';
+    outer.addEventListener(eventNameClickup, (e) => {
+      console.log('up');
       isPressedDown = false;
-      stage.style.transition = '0.2s';
+      stage.style.transition = '0.4s';
       stageLeftCurrent = stageLeftCurrent + cursorXSpace;
       boundCarouselMouseUp();
     });
 
-    outer.addEventListener('mousemove', (e) => {
+    const eventNameClickmove = deviceName === 'desktop' ? 'mousemove' : 'touchmove';
+    outer.addEventListener(eventNameClickmove, (e) => {
+      console.log('move');
       if (!isPressedDown) return;
-      stageClientXCurrent = positiveNumber(e.clientX);
+      stageClientXCurrent = positiveNumber(e.clientX || e.touches[0].clientX);
       cursorXSpace = stageClientXCurrent - stageClientXMouseDown;
       stage.style.left = `${stageLeftCurrent + cursorXSpace}px`;
       boundCarouselMouseMove();
@@ -502,4 +517,15 @@ function setAnimation() {
     elem.classList.add(animationClass);
     elem.classList.add('opacity-1');
   }
+}
+
+function getDeviceType() {
+  const userAgent = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
+    return 'tablet';
+  }
+  if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
+    return 'mobile';
+  }
+  return 'desktop';
 }

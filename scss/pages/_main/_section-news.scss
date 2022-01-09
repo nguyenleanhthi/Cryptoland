@@ -76,6 +76,11 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0;
+    &__carousel {
+      .carousel__stage {
+        width: calc(100% * 4);
+      }
+    }
   }
 }
 // end section news

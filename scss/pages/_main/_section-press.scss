@@ -59,6 +59,20 @@
   }
   @include responsive(lt-mobile) {
     padding: 60px 0;
+    &__carousel {
+      .carousel__outer {
+        min-height: 297px;
+      }
+      .carousel__stage {
+        width: calc(100% * 4);
+      }
+      .carousel__item {
+        padding: 0 30px;
+      }
+      .carousel__pagination {
+        margin-top: 30px;
+      }
+    }
   }
 }
 // end section press

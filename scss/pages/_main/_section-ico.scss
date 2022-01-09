@@ -1,5 +1,6 @@
 // section ico
 .ico {
+  padding: 0;
   .container {
     &::before {
       content: "";
@@ -117,14 +118,12 @@
   }
 
   @include responsive(lt-tablet-m) {
-    padding-bottom: 100px;
     .container {
       max-width: 100%;
     }
   }
 
   @include responsive(lt-mobile) {
-    padding-bottom: 60px;
     &__footer {
       flex-direction: column;
     }

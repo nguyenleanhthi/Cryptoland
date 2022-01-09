@@ -1,6 +1,6 @@
 // section about
 .about {
-  padding-bottom: 150px;
+  padding: 150px 0 0;
   &__description {
     width: 100%;
     display: flex;
@@ -76,7 +76,7 @@
   }
 
   @include responsive(lt-tablet-m) {
-    padding-bottom: 100px;
+    padding: 100px 0 0;
     .main-section__about-1,
     .main-section__about-2 {
       display: flex;
@@ -100,7 +100,7 @@
   }
 
   @include responsive(lt-mobile) {
-    padding-bottom: 60px;
+    padding: 60px 0 0;
     &__logo {
       & > img {
         width: 100%;
