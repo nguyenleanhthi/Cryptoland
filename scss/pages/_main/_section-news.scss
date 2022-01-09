@@ -85,6 +85,9 @@
         width: calc(100% * 4);
       }
     }
+    &__item {
+      margin-right: 0;
+    }
   }
   @include responsive(lt-mobile-m) {
     &__carousel {

@@ -2847,6 +2847,9 @@ body,
   .news__carousel .carousel__stage {
     width: calc(100% * 4);
   }
+  .news__item {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 25em) {
