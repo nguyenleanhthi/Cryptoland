@@ -1,0 +1,160 @@
+// section road map
+.road-map {
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 17px;
+
+    &__date-xs,
+    &__date {
+      width: 135px;
+      font-size: 14px;
+      color: #333;
+      font-family: Raleway;
+      font-weight: 700;
+      text-align: center;
+    }
+    &__date-xs {
+      display: none;
+    }
+    &__date {
+      margin-bottom: calc(24px - 6.5px);
+    }
+    &__name {
+      text-align: center;
+      width: 135px;
+      line-height: 25px;
+    }
+    &__rounder {
+      width: 17px;
+      height: 17px;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+      background-color: $color-white;
+      margin-bottom: 80px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 135px;
+        border: 0 solid $color-primary;
+        border-bottom-width: 1px;
+        position: absolute;
+        left: calc(100% + 2px);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        height: 47px;
+        border: 0px solid #e2e2e2;
+        border-left-width: 1px;
+        position: absolute;
+        // 2px is border
+        top: calc(100% + 2px + 5px);
+        left: calc(50%);
+        transform: translateX(-50%);
+      }
+
+      &--dashed {
+        &::before {
+          border-style: dashed;
+        }
+      }
+
+      &--hidden {
+        &::before {
+          display: none;
+        }
+      }
+
+      &--selected {
+        width: 30px;
+        height: 30px;
+        top: -6.5px;
+        margin-bottom: calc(80px - 13px);
+        & > div {
+          width: 15px;
+          height: 15px;
+          background-color: $color-light-red;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  @include responsive(lt-tablet-m) {
+    padding-bottom: 100px;
+    &__content {
+      flex-direction: column;
+    }
+    &__item {
+      height: 95px;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+
+      &__date {
+        text-align: right;
+      }
+
+      &__name {
+        white-space: nowrap;
+        text-align: left;
+        line-height: 1;
+        top: 0;
+      }
+
+      &__rounder {
+        margin: 0 30px;
+        &::after {
+          display: none;
+        }
+        &::before {
+          content: "";
+          height: 90px;
+          width: 0;
+          border-width: 0;
+          border-left-width: 1px;
+          position: absolute;
+          left: 50%;
+          top: calc(100% + 2px);
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  @include responsive(lt-tablet-s) {
+    &__item {
+      &__date {
+        display: none;
+      }
+      &__date-xs {
+        display: block;
+        text-align: left;
+        line-height: 25px;
+      }
+      &__rounder {
+        margin-left: 0;
+      }
+    }
+  }
+  @include responsive(lt-mobile) {
+    padding-bottom: 60px;
+  }
+}
+// end section road map

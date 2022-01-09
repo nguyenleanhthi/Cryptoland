@@ -1,9 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
-
   .copyright {
-    padding: 0 15px;
     font-size: 16px;
     line-height: 25px;
     color: #bdbdbd;
@@ -12,46 +10,101 @@
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
     padding: 96px 0 44px;
   }
+  // box contact
+  &__contact-box {
+    display: flex;
+    max-width: 41.666667%;
+    width: 100%;
+    margin-right: 95px;
+  }
+
   &__logo {
     width: 62px;
     height: 71px;
     margin-right: 40px;
-    margin-left: 15px;
     & > img {
       width: 100%;
       height: 100%;
     }
   }
-  &__contact {
-    width: 327px;
-    margin-right: 140px;
+  &__contact-content {
+    max-width: 100%;
     & > p {
       line-height: 30px;
     }
   }
-  &__navigation {
+  // //box contact
+
+  .navigation {
     display: flex;
     flex-wrap: wrap;
-    width: 350px;
-    margin-right: 15px;
-    .navigation__item {
-      width: 175px;
+    max-width: 33.333333%;
+    width: 100%;
+    padding: 0 15px;
+    &__item {
+      max-width: 50%;
+      width: 100%;
       margin-bottom: 14px;
     }
-    .navigation__link {
+    &__link {
       &::after {
         height: 1px;
         bottom: 3px;
       }
     }
   }
+
   &__intro {
-    width: 190px;
+    max-width: 16.666666%;
+    width: 100%;
     padding: 0 15px;
     & > p {
       margin-bottom: 14px;
     }
+  }
+
+  @include responsive(lt-tablet) {
+    &__contact-box {
+      margin-right: 80px;
+      margin-bottom: 40px;
+    }
+  }
+  @include responsive(lt-tablet-m) {
+    &__contact-box {
+      max-width: 100%;
+    }
+
+    .navigation {
+      max-width: 66.666667%;
+      padding: 0;
+    }
+
+    &__intro {
+      padding: 0;
+    }
+  }
+
+  @include responsive(lt-tablet-s) {
+    &__contact-box {
+      max-width: 100%;
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin-bottom: 40px;
+    }
+
+    .navigation {
+      max-width: 100%;
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include responsive(lt-mobile) {
+    padding-top: 60px;
   }
 }

@@ -1,0 +1,111 @@
+// section about
+.about {
+  padding-bottom: 150px;
+  &__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &__logo {
+    & > img {
+      max-width: 100%;
+    }
+  }
+  // about 1 (top)
+  .main-section__about-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+    position: relative;
+    max-width: 100%;
+    .about {
+      &__description {
+        max-width: 475px;
+      }
+      &__video-btn {
+        display: block;
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        box-shadow: 0 0 21px #383838c9;
+        position: relative;
+        &::after {
+          content: "";
+          width: 28px;
+          height: 33px;
+          background: url(../../assets/images/video-btn-icon.svg);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  // about 2 (bottom)
+  .main-section__about-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .about {
+      &__description {
+        max-width: 570px;
+      }
+    }
+  }
+
+  @include responsive(tablet) {
+    .main-section__about-1 {
+      .about {
+        &__description {
+          max-width: 400px;
+        }
+      }
+    }
+    .main-section__about-2 {
+      .about {
+        &__description {
+          max-width: 480px;
+        }
+      }
+    }
+  }
+
+  @include responsive(lt-tablet-m) {
+    padding-bottom: 100px;
+    .main-section__about-1,
+    .main-section__about-2 {
+      display: flex;
+      flex-direction: column-reverse;
+      .about {
+        &__logo {
+          position: initial;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .main-section__about-1 {
+      .about__video-btn {
+        display: none;
+      }
+    }
+  }
+
+  @include responsive(lt-mobile) {
+    padding-bottom: 60px;
+    &__logo {
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+}
+// end section about

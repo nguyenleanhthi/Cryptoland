@@ -1,0 +1,79 @@
+// section token
+.token {
+  padding: 150px 0;
+  background: url(../../assets/images/tokenBg-cut.png) no-repeat left top;
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &__title {
+    margin-bottom: 58px;
+  }
+  &__description {
+    max-width: 100%;
+    display: block;
+    width: 570px;
+  }
+  &__info {
+    margin-bottom: 48px;
+    &__group {
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 35px;
+      }
+    }
+    &__label {
+      display: inline-block;
+      width: 140px;
+      color: #404040;
+      font-weight: 700;
+    }
+    &__text {
+    }
+  }
+
+  &__summary-content {
+    margin-bottom: 46px;
+    &__title {
+      color: #333;
+      font-size: 25px;
+      margin-bottom: 27px;
+    }
+
+    & > p:nth-child(1) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn-buy {
+    padding: 0 32px;
+    line-height: 50px;
+    font-size: 16px;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 0;
+  }
+
+  @include responsive(tablet) {
+    background-position: -200px center;
+    &__description {
+      width: 480px;
+    }
+  }
+  @include responsive(lt-tablet-m) {
+    padding: 100px 0;
+    background-image: none;
+    .container {
+      flex-direction: row;
+    }
+  }
+  @include responsive(lt-mobile) {
+    padding: 60px 0;
+    &__btn-buy {
+      width: 100%;
+    }
+  }
+}
+// end section token

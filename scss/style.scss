@@ -7,7 +7,6 @@
 
 // import layout
 @import "layout/_animation";
-@import "layout/_layout";
 @import "layout/_header";
 @import "layout/_footer";
 @import "layout/_navigation";
@@ -15,4 +14,7 @@
 @import "layout/_carousel";
 
 // page file g
-@import "pages/_main";
+@import "pages/_main/_main";
+
+//responsive
+@import "responsive/_layout";

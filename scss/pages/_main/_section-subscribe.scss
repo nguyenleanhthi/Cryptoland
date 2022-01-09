@@ -1,0 +1,89 @@
+// section subcribe
+.subscribe {
+  padding: 150px 0;
+  background: url(../../assets/images/partnersBg.jpg) no-repeat center / cover;
+
+  .main-section__title {
+    margin-bottom: 68px;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: center;
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: 0.4s;
+      &:hover {
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+    }
+    &__link {
+      height: 18px;
+      & > i {
+        color: $color-white;
+      }
+    }
+  }
+
+  &__form-join {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 46px;
+    width: 100%;
+    &__input {
+      width: 344px;
+      height: 55px;
+      color: $text-color-title;
+      background-color: rgba($color: #fff, $alpha: 0.25);
+      padding: 0 25px;
+      margin-right: 6px;
+      border-radius: 5px;
+      font-weight: 300;
+      transition: 0.2s;
+      &::placeholder {
+        color: rgba($color: #fff, $alpha: 0.5);
+      }
+      &:focus,
+      &:hover {
+        background-color: rgba($color: #fff, $alpha: 1);
+        &::placeholder {
+          color: rgba($color: $text-color-title, $alpha: 0.4);
+        }
+      }
+    }
+    &__button {
+      width: 86px;
+      height: 55px;
+      position: relative;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  @include responsive(lt-tablet-m) {
+    padding: 100px 0;
+  }
+  @include responsive(lt-tablet-s) {
+    &__form-join {
+      flex-direction: column;
+      align-items: stretch;
+      &__input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      &__button {
+        width: 100%;
+      }
+    }
+  }
+  @include responsive(lt-mobile) {
+    padding: 60px 0;
+  }
+}
+// end section subcribe

@@ -4,25 +4,55 @@ const win = window,
   doc = document,
   docElem = doc.documentElement;
 
+win.ondragstart = function () {
+  return false;
+};
 win.onscroll = function () {
   changeOpacityHeader();
   setAnimation();
 };
 win.onload = function () {
   changeOpacityHeader();
+  setHeaderMenu();
   setIcoBar();
   setCarousel();
   setAnimation();
 };
 
 function changeOpacityHeader() {
+  let isOpen = doc.getElementById('header-menu').getAttribute('is-open') === 'true';
+  if (isOpen) return;
+
   const positionScoll = docElem.scrollTop;
   const header = doc.getElementById('header');
+
   if (positionScoll === 0) {
     header.classList.add('header--transparent');
   } else {
     header.classList.remove('header--transparent');
   }
+}
+
+function setHeaderMenu() {
+  const header = doc.getElementById('header');
+  const headerMenu = doc.getElementById('header-menu');
+  let isOpen = headerMenu.getAttribute('is-open') === 'true';
+
+  headerMenu.onclick = (e) => {
+    if (isOpen) {
+      header.style.height = null;
+      headerMenu.innerHTML = '<i class="fas fa-bars fa-lg">';
+      console.log();
+      if (docElem.scrollTop === 0) {
+        header.classList.add('header--transparent');
+      }
+    } else {
+      header.style.height = '100%';
+      headerMenu.innerHTML = '<i class="fas fa-times fa-lg"></i>';
+      header.classList.remove('header--transparent');
+    }
+    isOpen = !isOpen;
+  };
 }
 
 function setIcoBar() {
@@ -46,13 +76,11 @@ function setCarousel() {
   carousels.forEach((carousel, carouselIndex) => {
     const stage = carousel.querySelector('.carousel__stage');
     const outer = carousel.querySelector('.carousel__outer');
-    const carouselOuterWidth = outer.offsetWidth;
+    const carouselOuterWidth = outer.clientWidth;
     const pagination = carousel.querySelector('.carousel__pagination');
-    const itemOnePage = carousel.getAttribute('item-one-page');
-    const itemTotal = carousel.querySelectorAll('.carousel__item').length;
-    const itemWidth = carouselOuterWidth / itemOnePage;
-    const carouselStageWidth = itemTotal * itemWidth;
-    stage.style.width = carouselStageWidth + 'px';
+    const carouselStageWidth = stage.clientWidth;
+    const itemWidth = carouselStageWidth / carousel.querySelectorAll('.carousel__item').length;
+    
 
     let isPressedDown = false;
     let stageClientXMouseDown = 0;
@@ -74,7 +102,7 @@ function setCarousel() {
 
     outer.addEventListener('mouseup', (e) => {
       isPressedDown = false;
-      stage.style.transition = '0.4s';
+      stage.style.transition = '0.2s';
       stageLeftCurrent = stageLeftCurrent + cursorXSpace;
       boundCarouselMouseUp();
     });
@@ -147,8 +175,16 @@ function setCarousel() {
 }
 
 function setAnimation() {
+  if (docElem.clientWidth < 1200) {
+    const statisticNumberCounters = doc.querySelectorAll('.statistic__number__counter');
+    statisticNumberCounters.forEach((statisticNumberCounter) => {
+      statisticNumberCounter.innerText = statisticNumberCounter.getAttribute('value-target');
+    });
+    return;
+  }
+
   const docViewTop = docElem.scrollTop;
-  const docViewBottom = docViewTop + docElem.clientHeight;
+  const docViewBottom = docViewTop + docElem.offsetHeight;
   const docClientHeight = docElem.clientHeight;
 
   animationSectionPromo();

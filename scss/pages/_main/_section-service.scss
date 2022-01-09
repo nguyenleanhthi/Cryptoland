@@ -1,0 +1,68 @@
+// section service
+.service {
+  &__title {
+    margin-bottom: 74px;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(25% - 30px);
+    width: 100%;
+    min-height: 446px;
+    padding: 50px 5px 38px;
+    margin: 0 15px;
+    border: 5px solid;
+    border-radius: 5px;
+    &__icon {
+      width: auto;
+      height: auto;
+      margin-bottom: 42px;
+    }
+    &__title {
+      font-size: 20px;
+      font-family: Raleway;
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    &__content {
+      text-align: center;
+      color: $text-color-primary;
+      line-height: 30px;
+      margin-bottom: 46px;
+    }
+    &__btn-join {
+      width: 180px;
+      height: 55px;
+      box-shadow: 0 0 20px rgba(31, 109, 86, 0.25);
+    }
+  }
+
+  @include responsive(lt-tablet) {
+    &__item {
+      max-width: calc(50% - 30px);
+      margin-bottom: 30px;
+    }
+  }
+  @include responsive(lt-tablet-m) {
+    padding-bottom: 100px;
+  }
+  @include responsive(lt-tablet-s) {
+    &__item {
+      max-width: calc(100% - 30px);
+      margin-bottom: 30px;
+    }
+  }
+  @include responsive(lt-mobile) {
+    padding-bottom: 60px;
+  }
+}
+// end section service

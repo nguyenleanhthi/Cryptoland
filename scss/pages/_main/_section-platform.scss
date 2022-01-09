@@ -1,0 +1,71 @@
+// section platform
+.platform {
+  padding: 150px 0;
+  background: url(../../assets/images/token.png) no-repeat right center, #fcfcfc;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  &__description {
+    max-width: 100%;
+    width: 475px;
+  }
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
+  &__content {
+    margin-bottom: 46px;
+  }
+
+  &__logo {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    height: 580px;
+  }
+
+  @include responsive(lt-tablet) {
+    &__description {
+      width: 400px;
+    }
+
+    &__logo {
+      right: 13%;
+    }
+  }
+  @include responsive(lt-tablet-m) {
+    padding: 100px 0;
+    &__description {
+      width: 480px;
+    }
+    background-position: 600px -510px;
+    &__logo {
+      right: -115px;
+      bottom: -135px;
+    }
+  }
+
+  @include responsive(lt-tablet-s) {
+    &__description {
+      width: 540px;
+    }
+
+    background-image: none;
+    &__logo {
+      display: none;
+    }
+  }
+
+  @include responsive(lt-mobile) {
+    padding: 60px 0;
+    &__app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+// end section platform

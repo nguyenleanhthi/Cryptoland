@@ -4,6 +4,7 @@
     font-size: 1rem;
     color: $text-color-primary;
     position: relative;
+    white-space: nowrap;
     &::after {
       content: "";
       opacity: 0;

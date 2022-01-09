@@ -1,0 +1,30 @@
+// section partner
+.partner-1 {
+  padding: 150px 0;
+
+  .main-section__title {
+    margin-bottom: 34px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: auto;
+    justify-content: center;
+    .partner-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 28px 40px 0;
+      flex: 1;
+    }
+  }
+
+  @include responsive(lt-tablet-m) {
+    padding: 100px 0;
+  }
+  @include responsive(lt-mobile) {
+    padding: 60px 0;
+  }
+}
+// end section partner

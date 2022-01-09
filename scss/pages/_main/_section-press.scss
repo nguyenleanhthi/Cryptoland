@@ -1,0 +1,64 @@
+// section press
+.press {
+  padding: 150px 0;
+  .main-section__title {
+    margin-bottom: 57px;
+  }
+  &__carousel {
+    display: flex;
+    p {
+      text-align: center;
+      font-size: 20px;
+      line-height: 30px;
+      color: $text-color-primary;
+    }
+    .carousel__outer {
+      height: 237px;
+    }
+    .carousel__stage {
+      width: 2280px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 60px 0 30px;
+  }
+
+  @include responsive(lt-tablet) {
+    &__carousel {
+      .carousel__outer {
+        height: 267px;
+      }
+      .carousel__stage {
+        width: 1920px;
+      }
+    }
+  }
+  @include responsive(lt-tablet-m) {
+    padding: 100px 0;
+    &__carousel {
+      .carousel__outer {
+        height: 327px;
+      }
+      .carousel__stage {
+        width: 1440px;
+      }
+    }
+  }
+  @include responsive(lt-tablet-s) {
+    &__carousel {
+      .carousel__outer {
+        height: 267px;
+      }
+      .carousel__stage {
+        width: 2160px;
+      }
+    }
+  }
+  @include responsive(lt-mobile) {
+    padding: 60px 0;
+  }
+}
+// end section press

@@ -51,6 +51,9 @@
 
 .animation {
   opacity: 0;
+  @include responsive(lt-tablet) {
+    opacity: 1;
+  }
   &.bottom-to-top {
     animation-name: bottomToTop;
   }

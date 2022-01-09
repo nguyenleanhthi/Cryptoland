@@ -1,0 +1,114 @@
+// section statistic
+.statistic {
+  padding: 150px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 143px;
+  }
+
+  &__description {
+    max-width: 100%;
+    width: 475px;
+    .main-section__title {
+      margin-bottom: 37px;
+    }
+    .main-section__list-market__item {
+      line-height: 18px;
+      margin-bottom: 27px;
+      padding-left: 34px;
+    }
+    .main-section__content {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    top: 50px;
+    right: 0;
+    & > img {
+      max-width: 100%;
+    }
+  }
+
+  // bottom
+  &__number {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    &__item {
+      padding: 0 15px;
+      max-width: calc(25% - 30px);
+      width: 100%;
+    }
+    &__name {
+      font-family: Raleway;
+      font-weight: 700;
+      color: $color-light-black;
+      margin-bottom: 25px;
+      white-space: nowrap;
+    }
+    &__counter {
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 40px;
+      &--percent {
+        &::after {
+          content: "%";
+          color: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          font-size: inherit;
+        }
+      }
+    }
+  }
+  @include responsive(tablet) {
+    &__description {
+      width: 400px;
+    }
+  }
+  @include responsive(lt-tablet-m) {
+    padding: 100px 0;
+    &__content {
+      flex-direction: column;
+      margin-bottom: 70px;
+    }
+    &__description {
+      .main-section__content {
+        max-width: 100%;
+        width: 445px;
+      }
+    }
+    &__logo {
+      top: 0;
+    }
+    &__number {
+      &__item {
+        max-width: calc(50% - 30px);
+        margin-bottom: 25px;
+      }
+    }
+  }
+  @include responsive(lt-tablet-s) {
+    &__description {
+      margin-bottom: 70px;
+    }
+    &__number {
+      &__item {
+        max-width: calc(100% - 30px);
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  @include responsive(lt-mobile) {
+    padding: 60px 0;
+  }
+}
+
+// end section statistic

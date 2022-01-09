@@ -1,0 +1,68 @@
+@mixin responsive($break-point) {
+  // ---------- desktop ----------
+  @if $break-point == lt-desktop {
+    // <= 1399px
+    @media (max-width: 87.4375em) {
+      @content;
+    }
+  }
+  @if $break-point == gte-desktop-m {
+    // >= 1200px
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  // ---------- tablet ----------
+
+  @if $break-point == tablet {
+    // >= 992px and <= 1199px
+    @media (min-width: 62em) and (max-width: 74.9375em) {
+      @content;
+    }
+  }
+
+  @if $break-point == lt-tablet {
+    // <= 1199px
+    @media (max-width: 74.9375em) {
+      @content;
+    }
+  }
+
+  @if $break-point == tablet-m {
+    // >= 768px and <= 991px
+    @media (min-width: 48em) and (max-width: 61.9375em) {
+      @content;
+    }
+  }
+
+  @if $break-point == lt-tablet-m {
+    // <= 991px
+    @media (max-width: 61.9375em) {
+      @content;
+    }
+  }
+
+  @if $break-point == tablet-s {
+    // >= 576px and <= 767px
+    @media (min-width: 36em) and (max-width: 47.9375em) {
+      @content;
+    }
+  }
+
+  @if $break-point == lt-tablet-s {
+    // <= 767px
+    @media (max-width: 47.9375em) {
+      @content;
+    }
+  }
+
+  // ---------- mobile ----------
+
+  @if $break-point == lt-mobile {
+    // <= 576px
+    @media (max-width: 35.9375em) {
+      @content;
+    }
+  }
+}

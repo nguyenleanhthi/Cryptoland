@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cryptoland</title>
 
     <!-- link css, font, icon-->
@@ -36,25 +36,27 @@
           <li class="navigation__item"><a href="#" class="navigation__link">Team</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">FAQ</a></li>
         </ul>
-        <div class="header-right">
-          <div class="header-right__language">
-            <!-- <select name="" id="" class="header-right__select-hidden">
+        <div class="header__right">
+          <div class="header__right__language">
+            RU
+            <!-- <select name="" id="" class="header__right__select-hidden">
               <option value="ru">ru</option>
               <option value="ua">ua</option>
               <option value="en">en</option>
             </select>
-            <div class="header-right__language-selected">EN</div>
-            <ul class="header-right__language-select">
-              <li class="header-right__language-select__item">RU</li>
-              <li class="header-right__language-select__item">UA</li>
-              <li class="header-right__language-select__item">EN</li>
+            <div class="header__right__language-selected">EN</div>
+            <ul class="header__right__language-select">
+              <li class="header__right__language-select__item">RU</li>
+              <li class="header__right__language-select__item">UA</li>
+              <li class="header__right__language-select__item">EN</li>
             </ul> -->
           </div>
-          <div class="header-right__btn-group">
-            <a class="header-right__btn-signin btn btn--purple btn--light-black-hover">Sign in</a>
-            <a class="header-right__btn-signup btn btn--transperent">Sign up</a>
+          <div class="header__right__btn-group">
+            <a class="header__right__btn-signin btn btn--purple btn--light-black-hover">Sign in</a>
+            <a class="header__right__btn-signup btn btn--transperent">Sign up</a>
           </div>
         </div>
+        <div id="header-menu" class="header__menu" is-open="false"><i class="fas fa-bars fa-lg"></i></div>
       </header>
       <div class="main">
         <img src="./assets/images/big-triangle-bg-right.png" alt="" class="main-bg" />
@@ -77,47 +79,50 @@
               <img src="./assets/images/city.png" class="promo__logo-img" />
             </div>
           </div>
+          <img src="./assets/images/aboutBg.png" class="promo__about-bg" alt="" />
         </section>
         <!-- partner -->
         <section class="main-section partner">
           <div class="container">
-            <div class="partner-logo">
-              <img src="./assets/images/partners-logo-1.png" />
-            </div>
-            <div class="partner-logo">
-              <img src="./assets/images/partners-logo-2.png" />
-            </div>
-            <div class="partner-logo">
-              <img src="./assets/images/partners-logo-3.png" />
-            </div>
-            <div class="partner-logo">
-              <img src="./assets/images/partners-logo-4.png" />
-            </div>
-            <div class="partner-logo">
-              <img src="./assets/images/partners-logo-5.png" />
+            <div class="partner__box">
+              <div class="partner-logo">
+                <img src="./assets/images/partners-logo-1.png" />
+              </div>
+              <div class="partner-logo">
+                <img src="./assets/images/partners-logo-2.png" />
+              </div>
+              <div class="partner-logo">
+                <img src="./assets/images/partners-logo-3.png" />
+              </div>
+              <div class="partner-logo">
+                <img src="./assets/images/partners-logo-4.png" />
+              </div>
+              <div class="partner-logo">
+                <img src="./assets/images/partners-logo-5.png" />
+              </div>
             </div>
           </div>
         </section>
         <!-- about -->
         <section id="section-about" class="main-section about">
           <div class="container">
-            <div id="section-about-1" class="main-section__about-1 flex-row">
+            <div id="section-about-1" class="main-section__about-1">
               <div class="about__description animation" animation-duration="1">
                 <div class="main-section__subtitle main-section__subtitle--tire">ABOUT ICO</div>
-                <h2 class="service__title main-section__title title">Cryptoland Theme is the best for your ICO</h2>
+                <h2 class="main-section__title title">Cryptoland Theme is the best for your ICO</h2>
                 <p class="main-section__content">Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought. Jumbo plus shine sale.</p>
                 <ul class="main-section__list-market">
                   <li class="main-section__list-market__item main-section__list-market__item--dot">Mouthwatering leading how real formula also</li>
                   <li class="main-section__list-market__item main-section__list-market__item--dot">Locked-in have can mountain thought</li>
                   <li class="main-section__list-market__item main-section__list-market__item--dot">Locked-in have can mountain thought</li>
                 </ul>
-                <a class="about__video-btn btn btn--purple btn--light-black-hover" href="http://www.youtube.com/watch?v=0O2aH4XLbto"></a>
               </div>
+              <a class="about__video-btn btn btn--purple btn--light-black-hover" href="http://www.youtube.com/watch?v=0O2aH4XLbto"></a>
               <div class="about__logo">
                 <img src="./assets/images/about-img-1.png" alt="" class="about__logo-img" />
               </div>
             </div>
-            <div id="section-about-2" class="main-section__about-2 flex-row-reverse">
+            <div id="section-about-2" class="main-section__about-2">
               <div class="about__description animation" animation-duration="1">
                 <div class="main-section__subtitle main-section__subtitle--tire">DECENTRALISED ECONOMY</div>
                 <h2 class="main-section__title title">A banking platform that enables developer solutions</h2>
@@ -136,7 +141,7 @@
         </section>
         <!-- service -->
         <section id="section-service" class="main-section service">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle service__subtitle animation" animation-duration="1">AWESOME SERVICES</div>
             <h2 class="main-section__title service__title title animation" animation-duration="1">Awesome services</h2>
             <div class="service__box" animation-duration="1">
@@ -169,68 +174,89 @@
         </section>
         <!-- road map -->
         <section id="section-road-map" class="main-section road-map">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle road-map__subtitle animation" animation-duration="1">OUR WAY</div>
             <h2 class="road-map__title main-section__title road-map__title title animation" animation-duration="1">Road Map</h2>
             <div class="road-map__content">
               <div class="road-map__item animation" animation-duration="0.5">
                 <div class="road-map__item__date">June 2017</div>
                 <div class="road-map__item__rounder"><div></div></div>
-                <div class="road-map__item__name">Stats Center Beta</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">June 2017</span>
+                  <span> Stats Center Beta </span>
+                </div>
               </div>
               <div class="road-map__item animation" animation-duration="0.75">
                 <div class="road-map__item__date">June 2017</div>
                 <div class="road-map__item__rounder"><div></div></div>
-                <div class="road-map__item__name">BI Intergration</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">June 2017</span>
+                  <span> BI Intergration </span>
+                </div>
               </div>
               <div class="road-map__item animation" animation-duration="1">
                 <div class="road-map__item__date">December 2017</div>
                 <div class="road-map__item__rounder"><div></div></div>
-                <div class="road-map__item__name">Fantasy Prototype</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">December 2017</span>
+                  <span> Fantasy Prototype </span>
+                </div>
               </div>
               <div class="road-map__item animation" animation-duration="1.25">
                 <div class="road-map__item__date">December 2017</div>
                 <div class="road-map__item__rounder"><div></div></div>
-                <div class="road-map__item__name">Tokens Crowdsale</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">December 2017</span>
+                  <span> Tokens Crowdsale </span>
+                </div>
               </div>
               <div class="road-map__item animation" animation-duration="1.5">
                 <div class="road-map__item__date">January 2018</div>
                 <div class="road-map__item__rounder road-map__item__rounder--dashed road-map__item__rounder--selected"><div></div></div>
-                <div class="road-map__item__name">Blogging Platform</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">January 2018</span>
+                  <span> Blogging Platform </span>
+                </div>
               </div>
               <div class="road-map__item animation" animation-duration="1.75">
                 <div class="road-map__item__date">April 2018</div>
                 <div class="road-map__item__rounder road-map__item__rounder--dashed"><div></div></div>
-                <div class="road-map__item__name">Fantasy Sports with SCR</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">April 2018</span>
+                  <span> Fantasy Sports with SCR </span>
+                </div>
               </div>
               <div class="road-map__item animation" animation-duration="2">
                 <div class="road-map__item__date">May 2018</div>
                 <div class="road-map__item__rounder road-map__item__rounder--hidden"><div></div></div>
-                <div class="road-map__item__name">Advertizing System</div>
+                <div class="road-map__item__name">
+                  <span class="road-map__item__date-xs">May 2018</span>
+                  <span> Advertizing System </span>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <!-- process -->
         <section id="section-process" class="main-section process">
-          <div class="container flex-column animation" animation-duration="1">
+          <div class="container f-col-align-center animation" animation-duration="1">
             <div class="main-section__subtitle animation" animation-duration="1">PROCESS</div>
             <h2 class="process__title title main-section__title main-section__title--white">How it Works</h2>
             <div class="process__content">
               <div class="process__step animation" animation-duration="2">
                 <img src="./assets/images/process-icon-1.svg" alt="" class="process__step__icon" />
                 <div class="process__step__name">Processing</div>
-                <img src="./assets/images/process-arr-line.svg" alt="" class="process__step__arrow-line" />
+                <div class="process__step__arrow-line"></div>
               </div>
               <div class="process__step animation" animation-duration="1.5">
                 <img src="./assets/images/process-icon-2.svg" alt="" class="process__step__icon" />
                 <div class="process__step__name">Identification</div>
-                <img src="./assets/images/process-arr-line.svg" alt="" class="process__step__arrow-line" />
+                <div class="process__step__arrow-line"></div>
               </div>
               <div class="process__step animation" animation-duration="1">
                 <img src="./assets/images/process-icon-3.svg" alt="" class="process__step__icon" />
                 <div class="process__step__name">Exchange for other crypto currency</div>
-                <img src="./assets/images/process-arr-line.svg" alt="" class="process__step__arrow-line" />
+                <div class="process__step__arrow-line"></div>
               </div>
               <div class="process__step animation" animation-duration="0.5">
                 <img src="./assets/images/process-icon-4.svg" alt="" class="process__step__icon" />
@@ -241,8 +267,8 @@
         </section>
         <!-- statistic -->
         <section id="section-statistic" class="main-section statistic">
-          <div class="container flex-column">
-            <div class="statistic__content flex-row">
+          <div class="container f-col-align-center">
+            <div class="statistic__content">
               <div class="statistic__description animation" animation-duration="1">
                 <div class="main-section__subtitle main-section__subtitle--tire">OUR DATA</div>
                 <h2 class="main-section__title title">Statistic Information</h2>
@@ -271,8 +297,8 @@
             </div>
             <div class="statistic__number">
               <div class="statistic__number__item">
-                <div class="statistic__number__name">Current elixit price (BTC)</div>
-                <div class="statistic__number__counter txt--light-blue animation opacity-1" animation-duration="4" value-target="0.052646"></div>
+                <div class="statistic__number__name txt-center-tablet-m">Current elixit price (BTC)</div>
+                <div class="statistic__number__counter txt-center-tablet-m txt--light-blue animation opacity-1" animation-duration="4" value-target="0.052646"></div>
               </div>
               <div class="statistic__number__item">
                 <div class="statistic__number__name txt--center">Avarage batches used</div>
@@ -309,9 +335,9 @@
         </section>
         <!-- fag -->
         <section id="section-fag" class="main-section fag">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle animation" animation-duration="1">FAQ</div>
-            <h2 class="fag__title title main-section__title animation" animation-duration="1">Frequency Asked Questions</h2>
+            <h2 class="title main-section__title txt--center animation" animation-duration="1">Frequency Asked Questions</h2>
             <div class="fag__content">
               <div class="fag__item animation" animation-duration="0.5">
                 <div class="fag__item__title title">Frequency Asked Questions</div>
@@ -338,11 +364,11 @@
                 <div class="fag__item__title title">Why is Scorum’s economic model sustainable?</div>
                 <div class="fag__item__content">On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.</div>
               </div>
-              <div class="fag__item mg-0 animation" animation-duration="1.5">
+              <div class="fag__item animation" animation-duration="1.5">
                 <div class="fag__item__title title">Can I trade SCR at an exchange?</div>
                 <div class="fag__item__content">Can I trade SCR at an exchange?</div>
               </div>
-              <div class="fag__item mg-0 animation" animation-duration="1.75">
+              <div class="fag__item animation" animation-duration="1.75">
                 <div class="fag__item__title title">Can I mine SCR?</div>
                 <div class="fag__item__content">Can I trade SCR at an exchange?</div>
               </div>
@@ -351,7 +377,7 @@
         </section>
         <!-- platform -->
         <section id="section-platform" class="main-section platform">
-          <div class="container flex-row">
+          <div class="container">
             <div class="platform__description animation" animation-duration="1">
               <div class="main-section__subtitle main-section__subtitle--tire">MOBILE APP</div>
               <h2 class="platform__title main-section__title title">Cryptoland App for ICO Platform</h2>
@@ -361,14 +387,14 @@
                 <a href="#" class="platform__app-link"><img src="./assets/images/apple-store.png" alt="" /></a>
               </div>
             </div>
-            <div class="platform__logo animation" animation-duration="1">
-              <img src="./assets/images/iphone.png" alt="" />
-            </div>
+          </div>
+          <div class="platform__logo animation" animation-duration="1">
+            <img src="./assets/images/iphone.png" alt="" />
           </div>
         </section>
         <!-- token -->
         <section id="section-token" class="main-section token">
-          <div class="container flex-row-reverse">
+          <div class="container">
             <div class="token__description">
               <div class="main-section__subtitle main-section__subtitle--tire animation" animation-duration="1">ABOUT TOKEN</div>
               <h2 class="token__title main-section__title title animation" animation-duration="1">Token Sale</h2>
@@ -408,17 +434,25 @@
           <div class="container">
             <div class="main-section__subtitle main-section__subtitle--tire animation" animation-duration="0.75">OUR FILES</div>
             <h2 class="main-section__title title animation" animation-duration="1">Documents</h2>
-            <div class="document__content">
-              <a href="#" class="document__item-link btn btn--white animation" animation-duration="1">Terms & Conditions</a>
-              <a href="#" class="document__item-link btn btn--white animation" animation-duration="1.25">White Pappers</a>
-              <a href="#" class="document__item-link btn btn--white animation" animation-duration="1.5">Privacy Policy</a>
-              <a href="#" class="document__item-link btn btn--white animation" animation-duration="1.75">Business Profile</a>
-            </div>
+            <ul class="document__content">
+              <li class="document__item">
+                <a href="#" class="document__item-link txt--light-black animation" animation-duration="1">Terms & Conditions</a>
+              </li>
+              <li class="document__item">
+                <a href="#" class="document__item-link txt--light-black animation" animation-duration="1.25">White Pappers</a>
+              </li>
+              <li class="document__item">
+                <a href="#" class="document__item-link txt--light-black animation" animation-duration="1.5">Privacy Policy</a>
+              </li>
+              <li class="document__item">
+                <a href="#" class="document__item-link txt--light-black animation" animation-duration="1.75">Business Profile</a>
+              </li>
+            </ul>
           </div>
         </section>
         <!-- Advisor -->
         <section id="section-advisor" class="main-section advisor">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle animation" animation-duration="1">FAMILY</div>
             <h2 class="title main-section__title animation" animation-duration="1">Advisors</h2>
             <div class="advisor__box">
@@ -428,8 +462,8 @@
                   <img src="./assets/images/advisorImg-1.png" alt="" class="advisor__img" />
                   <img src="./assets/images/linkedin.svg" alt="" class="advisor__icon" />
                 </div>
-                <div class="advisor__name">David Drake</div>
-                <div class="advisor__role">CEO Capital Limited</div>
+                <div class="advisor__name txt--no-wrap">David Drake</div>
+                <div class="advisor__role txt--no-wrap">CEO Capital Limited</div>
               </div>
               <div class="advisor__info animation" animation-duration="1">
                 <div class="advisor__avatar">
@@ -437,8 +471,8 @@
                   <img src="./assets/images/advisorImg-2.png" alt="" class="advisor__img" />
                   <img src="./assets/images/google-plus.svg" alt="" class="advisor__icon" />
                 </div>
-                <div class="advisor__name">Anna Balock</div>
-                <div class="advisor__role">Cryptonet Speaker</div>
+                <div class="advisor__name txt--no-wrap">Anna Balock</div>
+                <div class="advisor__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="advisor__info animation" animation-duration="1">
                 <div class="advisor__avatar">
@@ -446,8 +480,8 @@
                   <img src="./assets/images/advisorImg-3.png" alt="" class="advisor__img" />
                   <img src="./assets/images/facebook.svg" alt="" class="advisor__icon" />
                 </div>
-                <div class="advisor__info__name">Vladimir Nikitin</div>
-                <div class="advisor__info__role">Cryptonet Team Lead</div>
+                <div class="advisor__name txt--no-wrap">Vladimir Nikitin</div>
+                <div class="advisor__role txt--no-wrap">Cryptonet Team Lead</div>
               </div>
             </div>
           </div>
@@ -455,116 +489,116 @@
         <!-- team -->
         <section id="section-team" class="main-section brain">
           <div class="container">
-            <div class="main-section__subtitle main-section__subtitle--tire animation" animation-duration="1">OUR BRAIN</div>
-            <h2 class="main-section__title main-section__title--white title animation" animation-duration="1">Awesome Team</h2>
+            <div class="main-section__subtitle main-section__subtitle--tire txt--no-wrap animation" animation-duration="1">OUR BRAIN</div>
+            <h2 class="main-section__title main-section__title--white title txt--no-wrap animation" animation-duration="1">Awesome Team</h2>
             <div class="brain__box">
               <div class="brain__info animation" animation-duration="0.75">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-1.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">David Drake</div>
-                <div class="brain__role">UI Designer</div>
+                <div class="brain__name txt--no-wrap">David Drake</div>
+                <div class="brain__role txt--no-wrap">UI Designer</div>
               </div>
               <div class="brain__info animation" animation-duration="1">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-2.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1.25">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-3.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1.5">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-4.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1.75">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-5.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="2">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-6.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="0.75">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-7.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-8.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1.25">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-9.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1.5">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-10.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="1.75">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-11.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
               <div class="brain__info animation" animation-duration="2">
                 <img src="./assets/images/facebook.svg" alt="" class="brain__icon" />
                 <div class="brain__avatar">
                   <img src="./assets/images/team-member-ava-12.png" alt="" class="brain__img" />
                 </div>
-                <div class="brain__name">Anna Balock</div>
-                <div class="brain__role">Cryptonet Speaker</div>
+                <div class="brain__name txt--no-wrap">Anna Balock</div>
+                <div class="brain__role txt--no-wrap">Cryptonet Speaker</div>
               </div>
             </div>
           </div>
         </section>
         <!-- press -->
         <section class="main-section press">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle">PRESS ABOUT US</div>
             <h2 class="title main-section__title">Press</h2>
-            <div class="press__carousel carousel" item-one-page="2">
+            <div class="press__carousel carousel">
               <div class="press__carousel__outer carousel__outer">
-                <div class="carousel__stage" width="2280">
+                <div class="carousel__stage">
                   <div class="press__item carousel__item">
                     <p>“Support of this standard guarantees the compatibility of the token with third-party services (wallets, exchanges, listings, etc.), and provides easy integration”</p>
                     <a href="#" class="partner-logo">
@@ -597,12 +631,12 @@
         </section>
         <!-- news -->
         <section class="main-section news">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle">IN THE WORLD</div>
             <h2 class="title main-section__title">Latest News</h2>
-            <div class="news__carousel carousel" item-one-page="3">
+            <div class="news__carousel carousel">
               <div class="news__carousel__outer carousel__outer">
-                <div class="carousel__stage" width="1520">
+                <div class="carousel__stage">
                   <div class="news__item carousel__item">
                     <div class="news__item__subtitle main-section__subtitle">Cryptocurrency</div>
                     <h2 class="news__item__title title main-section__title">New trends in UI/UX Design World Integration</h2>
@@ -659,7 +693,7 @@
         </section>
         <!-- subscribe -->
         <section class="main-section subscribe">
-          <div class="container flex-column">
+          <div class="container f-col-align-center">
             <div class="main-section__subtitle">NEWSLATTER</div>
             <h2 class="main-section__title main-section__title--white title">Subscribe</h2>
             <form class="subscribe__form-join">
@@ -689,14 +723,16 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__content">
-            <div class="footer__logo"><img src="./assets/images/Logo_gradient.svg" alt="" /></div>
-            <div class="footer__contact">
-              <p class="footer__text">523 Sylvan Ave, 5th Floor Mountain View, CA</p>
-              <p class="footer__text">+1 (234) 56789, +1 987 654 3210</p>
-              <p class="footer__text">info@cryptoland.com</p>
-              <p class="footer__text">supportcenter@cryptoland.com</p>
+            <div class="footer__contact-box">
+              <div class="footer__logo"><img src="./assets/images/Logo_gradient.svg" alt="" /></div>
+              <div class="footer__contact-content">
+                <p class="footer__text">523 Sylvan Ave, 5th Floor Mountain View, CA</p>
+                <p class="footer__text">+1 (234) 56789, +1 987 654 3210</p>
+                <p class="footer__text">info@cryptoland.com</p>
+                <p class="footer__text">supportcenter@cryptoland.com</p>
+              </div>
             </div>
-            <ul class="navigation footer__navigation">
+            <ul class="navigation">
               <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
               <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
               <li class="navigation__item"><a href="#" class="navigation__link">Road Map</a></li>
@@ -707,10 +743,10 @@
               <li class="navigation__item"><a href="#" class="navigation__link">FAQ</a></li>
             </ul>
             <div class="footer__intro">
-              <p class="footer__text">Whitepaper</p>
-              <p class="footer__text">Technical Paper</p>
-              <p class="footer__text">Business Summary</p>
-              <p class="footer__text">Brand Resources</p>
+              <p class="footer__text txt--no-wrap">Whitepaper</p>
+              <p class="footer__text txt--no-wrap">Technical Paper</p>
+              <p class="footer__text txt--no-wrap">Business Summary</p>
+              <p class="footer__text txt--no-wrap">Brand Resources</p>
             </div>
           </div>
           <div class="copyright">© 2018, Cryptoland Theme by Artureanec</div>
