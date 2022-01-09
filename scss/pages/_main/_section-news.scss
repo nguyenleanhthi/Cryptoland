@@ -10,6 +10,9 @@
     .carousel__stage {
       width: 1520px;
     }
+    .carousel__pagination {
+      margin-top: 30px;
+    }
   }
 
   &__item {
@@ -81,17 +84,11 @@
       .carousel__stage {
         width: calc(100% * 4);
       }
-      .carousel__outer{
-        // height: calc(422px + 10vw);
-      }
-      .carousel__navigation {
-        margin-top: 30px;
-      }
     }
   }
   @include responsive(lt-mobile-m) {
     &__carousel {
-      .carousel__outer{
+      .carousel__outer {
         height: calc(422px + 100vh - 150vw);
       }
     }

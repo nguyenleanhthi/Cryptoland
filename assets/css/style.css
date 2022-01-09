@@ -2768,6 +2768,10 @@ body,
   width: 1520px;
 }
 
+.news__carousel .carousel__pagination {
+  margin-top: 30px;
+}
+
 .news__item {
   padding: 40px 49px 36px 38px;
   margin: 20px 30px 70px 0;
@@ -2842,9 +2846,6 @@ body,
   }
   .news__carousel .carousel__stage {
     width: calc(100% * 4);
-  }
-  .news__carousel .carousel__navigation {
-    margin-top: 30px;
   }
 }
 
