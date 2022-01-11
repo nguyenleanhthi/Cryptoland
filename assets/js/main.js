@@ -37,9 +37,9 @@ function changeOpacityHeader() {
 function setHeaderMenu() {
   const header = doc.getElementById('header');
   const headerMenu = doc.getElementById('header-menu');
-  let isOpen = headerMenu.getAttribute('is-open') === 'true';
   const navigationLinks = header.querySelectorAll('.navigation .navigation__link');
   headerMenu.onclick = (e) => {
+    const isOpen = headerMenu.getAttribute('is-open') === 'true';
     if (isOpen) {
       header.style.height = null;
       headerMenu.innerHTML = '<i class="fas fa-bars fa-lg">';
@@ -48,12 +48,12 @@ function setHeaderMenu() {
       }
     } else {
       header.style.height = '100%';
+      header.style.overflowY = 'auto';
       headerMenu.innerHTML = '<i class="fas fa-times fa-lg"></i>';
       header.classList.remove('header--transparent');
     }
-    isOpen = !isOpen;
+    headerMenu.setAttribute('is-open', !isOpen);
   };
-
   navigationLinks.forEach((navigationLink) => {
     navigationLink.onclick = (e) => {
       header.style.height = null;
@@ -61,7 +61,7 @@ function setHeaderMenu() {
       if (docElem.scrollTop === 0) {
         header.classList.add('header--transparent');
       }
-      isOpen = false;
+      headerMenu.setAttribute('is-open', false);
     };
   });
 }
@@ -503,7 +503,7 @@ function setAnimation() {
     const elemRect = elem.getBoundingClientRect();
     const elemRectTop = elemRect.top;
     const elemRectHeight = elemRect.height;
-    console.log(elemRectTop, elemRectHeight, docClientHeight)
+    console.log(elemRectTop, elemRectHeight, docClientHeight);
     return elemRectTop + elemRectHeight / part - docClientHeight <= 0;
   }
 

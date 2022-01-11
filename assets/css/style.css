@@ -324,7 +324,7 @@ body,
   -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 10;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .header__logo {
@@ -507,7 +507,6 @@ body,
         -ms-flex-pack: initial;
             justify-content: initial;
     height: 100%;
-    overflow: hidden;
     height: 90px;
   }
   .header .navigation {
